@@ -44,7 +44,7 @@ function Header() {
         <BellIcon className="h-6 w-6" />
         <Link href="/account">
           <img
-            src="https://rb.gy/glpwyx"
+            src="https://rb.gy/g1pwyx"
             alt=""
             className="curspr-pointer rounded"
           />
