@@ -1,9 +1,7 @@
 import Head from 'next/head'
-import Image from 'next/image'
 import Banner from '../components/Banner'
 import Header from '../components/Header'
 import Row from '../components/Row'
-import mypic from '../images/111.jpeg'
 import { Movie } from '../typings'
 import requests from '../utils/requests'
 
@@ -55,11 +53,6 @@ const Home = ({
         </section>
       </main>
       {/* Modal */}
-      <Image className='item-center'
-          src={mypic}
-          width="350px"
-          height="300px"
-        />
     </div>
   )
 }
