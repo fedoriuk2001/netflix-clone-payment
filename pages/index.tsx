@@ -33,12 +33,13 @@ const Home = ({
   const { loading } = useAuth()
   const showModal = useRecoilValue(modalState)
   // const [showModal, setShowModal] = useState(false)
-  
+
   if (loading) return null
 
   return (
     <div
-      className="realtive h-screen bg-gradient-to-b lg:h-[140vh]"
+      className={`realtive h-screen bg-gradient-to-b lg:h-[140vh]
+      ${showModal && '!h-screen overflow-hidden'}`}
     >
       <Head>
         <title>Create Next App</title>
@@ -46,9 +47,9 @@ const Home = ({
       </Head>
 
       <Header />
-      <main className="relative pl-4 pb-24 lg:space-y-24 lg:pl-16 overflow-x-hidden">
+      <main className="relative overflow-x-hidden pl-4 pb-24 lg:space-y-24 lg:pl-16">
         <Banner netflixOriginals={netflixOriginals} />
-        <section className='md:space-y-24'>
+        <section className="md:space-y-24">
           <Row title="Trending Now" movies={trendingNow} />
           <Row title="Top Rated" movies={topRated} />
           <Row title="Action Thrillers" movies={actionMovies} />
